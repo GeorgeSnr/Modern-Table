@@ -1,0 +1,21 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Invoice {
+  id      Int      @id @default(autoincrement())
+  invoice   String   @unique
+  status    String
+  method    String
+  amount    Int
+}
+
+enum Role {
+  USER
+  ADMIN
+}
