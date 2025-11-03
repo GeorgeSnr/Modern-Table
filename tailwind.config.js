@@ -1,6 +1,6 @@
 // tailwind.config.js
 
-import { withUt } from "uploadthing/tw";
+
 
 module.exports = withUt ({
   darkMode: 'class', // or 'media' for automatic dark mode
